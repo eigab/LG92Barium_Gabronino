@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Main</title>
+<style>
+  body {
+    background-color: lightpink;
+    text-align: center;
+    padding-top: 50px;
+  }
+</style>
+</head>
+<body>
+
+<script>
+function SecondPage() {
+  alert("You will be redirected to the second page.");
+  /* Base on w3schools, the open() method opens a new browser window, or a new tab*/
+  window.open("second.html");
+}
+
+/* waits until all images, etc. has loaded*/
+window.onload = function() {
+  SecondPage();
+};
+</script>
+
+</body>
+</html>

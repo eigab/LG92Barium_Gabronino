@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Redirected</title>
+<style>
+  body {
+    background-color: lightpink;
+    text-align: center;
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  button {
+    background-color: white;
+    color: black;
+    border: 2px solid lightpink;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 5px;
+  }
+  #myImage {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 20px;
+  }
+</style>
+</head>
+<body>
+
+<img id="myImage" src="images/image1.jpg" alt="Image 1">
+
+<button onclick="changeImage()">Change Image</button>
+<button onclick="revertImage()">Revert Image</button>
+
+<script>
+var image = document.getElementById("myImage");
+var originalSrc = image.src;
+var image1Src = "images/image1.jpg";
+var image2Src = "images/image2.jpg";
+
+function changeImage() {
+  image.src = image2Src;
+}
+
+function revertImage() {
+  image.src = image1Src;
+}
+</script>
+
+</body>
+</html>
